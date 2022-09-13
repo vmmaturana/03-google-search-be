@@ -42,10 +42,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("This is the search page");
+  res.render("search");
 });
 app.get("/results", (req, res) => {
-  res.send("This is the result page");
+  res.render("results");
 });
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
