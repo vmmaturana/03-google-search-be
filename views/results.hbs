@@ -15,21 +15,21 @@
 
 
 <div class="cuerpo-results">
-	<p class="small py-2">37 Results</p>
+	<p class="small py-2">{{resultsKey.length}} Results</p>
 
- {{#each resultsKey as |data|}}
+ {{#each resultsKey as |info|}}
 
-	<p class="small">{{data.url}}</p>
+	<p class="small">{{info.url}}</p>
 	<p class="h2">
-		<a href="{{data.url}}" class="link-primary"
-			>{{data.title}}</a
+		<a href="{{info.url}}" class="link-primary"
+			>{{info.title}}</a
 		>
 	</p>
 	<p>
-		{{data.description}}
+		{{info.description}}
 	</p>
 	<ul>
-		{{#each data.links as |link|}}
+		{{#each info.links as |link|}}
 			<li><a href={{link.url}} class="link-primary">{{link.title}}</a></li>
 		{{/each}}
 	</ul>
