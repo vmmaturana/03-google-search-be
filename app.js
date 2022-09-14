@@ -41,12 +41,10 @@ app.use(express.static(path.join(__dirname, "public")));
 // )
 
 // Routes
-app.get("/", (req, res) => {
-  res.render("search");
-});
-app.get("/results", (req, res) => {
-  res.render("results");
-});
+
+app.use("/", require("./controllers/search"));
+app.use("/results", require("./controllers/results"));
+
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
