@@ -9,9 +9,9 @@ router.post("/", (req, res) => {
 });
 
 // CREAMOS UNA FUNCION DE FILTRO.
-const filterResults = (arr, search) => {
+const filterResults = (arr, searchLocal) => {
   return arr.filter((result) =>
-    result.title.toLowerCase().includes(search.toLowerCase())
+    result.title.toLowerCase().includes(searchLocal.toLowerCase())
   );
 };
 
