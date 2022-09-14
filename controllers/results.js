@@ -5,6 +5,7 @@ const router = express.Router();
 //GET controller for website
 router.post("/", (req, res) => {
   res.render("results", { resultsKey: results });
+  console.log(req.body);
 });
 
 // Data Array of information
