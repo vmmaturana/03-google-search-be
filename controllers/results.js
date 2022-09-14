@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 //GET controller for website
-router.get("/", (req, res) => {
+router.post("/", (req, res) => {
   res.render("results", { resultsKey: results });
 });
 
