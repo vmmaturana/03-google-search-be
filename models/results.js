@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.model("results", {
+module.exports = mongoose.model("results", {
   title: {
     type: String,
     required: true,
